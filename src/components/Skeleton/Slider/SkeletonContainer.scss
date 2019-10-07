@@ -1,0 +1,88 @@
+.slider-skeleton-container {
+  padding: 40px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-skeleton {
+  display: flex;
+  position: relative;
+
+  &__container {
+    display: flex;
+    padding: 0 55px;
+    z-index: 3;
+    width: 100%;
+  }
+}
+
+.skeleton-item {
+  flex: 0 0 20.0%;
+  margin: 0 2px;
+  display: inline-block;
+  position: relative;
+  -webkit-animation-name: skeletonAnimate;
+  animation-name: skeletonAnimate;
+
+  .placeholder {
+    height: 200px;
+    position: absolute;
+    width: 100%;
+    vertical-align: top;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeholderSkeleton;
+    animation-name: placeholderSkeleton;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    background: #1d1d1d;
+     background-image: -webkit-gradient(linear, left center, right center, 
+     from(#1f1e1e), 
+     color-stop(.2, #202020), 
+     color-stop(.4, #222222), 
+     to(#1d1d1d));
+  background-image: -webkit-linear-gradient(left, #1f1e1e 0%, #202020 20%, #222222 40%, #1d1d1d 100%);
+    background-repeat: no-repeat;
+    position: relative
+  }
+}
+
+@keyframes placeholderSkeleton {
+  0% {
+    background-position: -500px 0;
+  }
+  100% {
+    background-position: 500px 0;
+  }
+}
+
+@-webkit-keyframes placeholderSkeleton {
+  0% {
+    background-position: -500px 0;
+  }
+  100% {
+    background-position: 500px 0;
+  }
+}
+@-webkit-keyframes skeletonAnimate {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+
+@keyframes skeletonAnimate {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+
