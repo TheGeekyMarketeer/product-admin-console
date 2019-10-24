@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Slider from './components/Slider';
 import SliderSkeleton from './components/Skeleton/Slider/SliderSkeletonContainer';
 import './App.scss';
+import AutoSuggest from './components/AutoComplete';
 
 const movies = [
   {
@@ -46,12 +47,16 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Slider>
+        <AutoSuggest>
+            
+        </AutoSuggest>
+       
+        {/* <Slider>
           {movies.map(movie => (
             <Slider.Item movie={movie} key={movie.id}>item1</Slider.Item>
           ))}
         </Slider>
-        <SliderSkeleton/>
+        <SliderSkeleton/> */}
       
       </div>
     );
